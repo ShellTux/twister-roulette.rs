@@ -1,26 +1,13 @@
+use enum_derive::Random;
 use rand::seq::IndexedRandom;
 use std::fmt;
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Random)]
 pub enum BodyPart {
     LeftHand,
     RightHand,
     LeftFoot,
     RightFoot,
-}
-
-impl BodyPart {
-    pub fn random() -> Self {
-        let mut rng = rand::rng();
-        let body_parts = [
-            Self::LeftHand,
-            Self::RightHand,
-            Self::LeftFoot,
-            Self::RightFoot,
-        ];
-
-        *body_parts.choose(&mut rng).unwrap()
-    }
 }
 
 impl fmt::Display for BodyPart {

@@ -1,21 +1,14 @@
 use colored::Colorize;
+use enum_derive::Random;
 use rand::seq::IndexedRandom;
 use std::fmt;
 
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, Random)]
 pub enum Color {
     Red,
     Green,
     Blue,
     Yellow,
-}
-
-impl Color {
-    pub fn random() -> Self {
-        let mut rng = rand::rng();
-        let colors = [Color::Red, Color::Green, Color::Blue, Color::Yellow];
-        *colors.choose(&mut rng).unwrap()
-    }
 }
 
 impl fmt::Display for Color {

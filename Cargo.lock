@@ -114,6 +114,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "enum_derive"
+version = "0.1.0"
+dependencies = [
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -234,6 +242,7 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "colored",
+ "enum_derive",
  "rand",
 ]
 
